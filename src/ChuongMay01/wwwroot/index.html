@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html ng-app="chuongmay01">
+<head>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-cloak>
+    <div layout="row" ng-controller="categoryController">
+        quote:{{categoryList}}
+        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2 md-navigation-drawer" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+            <md-list>
+                <md-list-item class="md-2-line" ng-repeat="item in categoryList" role="link">
+                    <div class="md-list-item-text">
+                        <span class="md-body-2">{{item.categoryName}}</span>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+        <md-content layout="column" class="relative" layout-fill role="main">
+            <ui-view />
+        </md-content>
+    </div>
+</body>
+</html>

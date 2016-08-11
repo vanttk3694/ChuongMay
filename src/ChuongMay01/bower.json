@@ -1,0 +1,15 @@
+{
+	"name": "asp.net",
+	"private": true,
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "jquery-validation": "1.14.0",
+    "jquery-validation-unobtrusive": "3.2.6",
+    "angular": "1.5.8",
+    "angular-material": "1.0.9",
+    "angular-resource": "1.5.8",
+    "angular-route": "1.5.8",
+    "angular-ui-router": "0.3.1",
+    "jQuery": "3.1.0"
+  }
+}
