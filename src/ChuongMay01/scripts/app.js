@@ -6,8 +6,8 @@
         'ngRoute',
         'ui.router',
         // Custom modules 
-        "categoryService"
-
+        "categoryViewService",
+        "categoryAddService"
         // 3rd Party Modules
 
     ]);
@@ -17,14 +17,21 @@
             $stateProvider
                     //CLIENT
                         .state('index', {
-                            url: '/index',
+                            url: '/',
                             abstract: true,
                             templateUrl: 'partials/category.html'
                         })
-                        .state('add', {
+                        .state('category', {
+                            url: '/category',
+                            templateUrl: 'admin/category/category-view.html',
+                            controller: 'categoryController'
+                        })
+                        .state('category.add', {
                             url: '/add',
-                            templateUrl: 'admin/indexOld.html'
+                            templateUrl: 'admin/category/category-create.html',
+                            controller: 'categoryAddController'
                         });
+
             /* $routeProvider
                 .when('/', {
                     templateUrl: 'partials/quotes.html',
@@ -34,7 +41,7 @@
                     templateUrl: 'partials/add.html',
                     controller: 'quotesAddcontroller'
                 });*/
-            $urlRouterProvider.otherwise('/index');
+            $urlRouterProvider.otherwise('/');
             /*$locationProvider.html5Mode({
                 enabled: true,
                 requireBase: false

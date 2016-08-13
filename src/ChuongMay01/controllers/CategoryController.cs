@@ -34,21 +34,29 @@ namespace ChuongMay01.controllers
             return "value";
         }
 
-        // POST api/values
+        [HttpPost]
+        public IActionResult Post([FromBody]Category category)
+        {
+                _context.Category.Add(category);
+                _context.SaveChanges();
+                return new ObjectResult(category);
+        }
+
+        /*// POST api/values
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category cat)
         {
             _context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT Category ON");
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 _context.Category.Add(cat);
                 _context.SaveChanges();
                 return new ObjectResult(cat);
-            }
+            //}
 
-            return BadRequest();
-        }
+            //return BadRequest();
+        }*/
 
         // PUT api/values/5
         [HttpPut("{id}")]

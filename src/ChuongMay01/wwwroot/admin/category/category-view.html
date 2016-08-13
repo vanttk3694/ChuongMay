@@ -1,0 +1,15 @@
+﻿<div layout="row">
+        quote:{{categoryList}}
+        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2 md-navigation-drawer" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+            <md-list>
+                <md-list-item class="md-2-line" ng-repeat="item in categoryList" role="link">
+                    <div class="md-list-item-text">
+                        <span class="md-body-2">{{item.categoryName}}</span>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+        <md-content layout="column" class="relative" layout-fill role="main">
+            <ui-view />
+        </md-content>
+    </div>

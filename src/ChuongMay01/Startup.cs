@@ -17,6 +17,8 @@ namespace ChuongMay01
     {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
+        public IConfiguration Configuration { get; set; }
+
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = @"Server=DESKTOP-8BCGFR2;User Id=sa;Password=123;Database=ChuongMayDB;Trusted_Connection=True;";

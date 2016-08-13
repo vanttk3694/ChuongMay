@@ -1,0 +1,16 @@
+﻿<div ng-controller="categoryAddController">
+    <p>Add category</p>
+    <form>
+        <label for="title">Name</label>
+        <input ng-model="CategoryName" name="CategoryName" type="text" />
+
+        <label for="title">Parent Id</label>
+        <input ng-model="CategoryParentId" name="CategoryParentId" type="text" />
+
+        <label for="title">Url</label>
+        <input ng-model="CategoryUrl" name="CategoryUrl" type="text" />
+
+        <input type="button" value="Add" ng-click="addData()"/>
+        {{}}
+    </form>
+</div>

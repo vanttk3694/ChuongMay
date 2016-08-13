@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ChuongMay01.models
 {
@@ -9,7 +10,7 @@ namespace ChuongMay01.models
         {
             Product = new HashSet<Product>();
         }
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryId { get; set; }
         public int CategoryParentId { get; set; }
         public string CategoryName { get; set; }
